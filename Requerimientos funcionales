@@ -1,0 +1,55 @@
+- Requerimientos funcionales
+
+El sistema debe permitir registrar un estudiante con ID, nombre, correo electrónico y nivel de conocimiento en IA (Básico, Intermedio, Avanzado), validando que el correo sea válido y el ID no esté duplicado.
+
+2. El sistema debe permitir registrar un instructor con ID, nombre, correo electrónico y especialidad en IA, validando que el correo sea válido y el ID no esté duplicado.
+
+3. El sistema debe permitir crear un curso virtual de IA con código único, nombre y asignarle un instructor previamente registrado, impidiendo códigos duplicados.
+
+4. El sistema debe permitir agregar sesiones a un curso, cada una con ID, tema y fecha/hora, estableciendo una relación de composición entre Curso y Sesion.
+
+5. El sistema debe permitir registrar la asistencia de un estudiante a una sesión específica de un curso, verificando que el estudiante esté inscrito, la sesión pertenezca al curso y registrando si estuvo presente o ausente.
+
+6. El sistema debe permitir registrar una nota (0-100) de un estudiante en una evaluación específica de un curso, validando que la evaluación exista y la nota esté dentro del rango permitido.
+
+7. El sistema debe permitir mostrar un reporte detallado de un curso, incluyendo instructor, estudiantes inscritos, registros de asistencia y notas registradas por evaluación.
+
+8. El sistema debe organizar las entidades (estudiantes, instructores, cursos, sesiones, evaluaciones, asistencias, notas) usando colecciones `ArrayList` y `Map` para su gestión dinámica.
+
+9. El sistema debe implementar clases, objetos, atributos y métodos para modelar adecuadamente las entidades del dominio: Persona, Estudiante, Instructor, Curso, Sesion, Asistencia, Nota, Evaluacion.
+
+10. El sistema debe aplicar herencia entre clases: `Estudiante` e `Instructor` deben heredar de la clase abstracta `Persona`.
+
+11. El sistema debe usar encapsulamiento y visibilidad adecuada (`private`, `protected`, `public`) para proteger los atributos y controlar el acceso mediante métodos.
+
+12. El sistema debe implementar relaciones entre clases: asociación (Curso ↔ Instructor), agregación (Curso → Estudiantes/Evaluaciones), y composición (Curso → Sesiones; Asistencia → Estudiante+Sesion).
+
+13. El sistema debe aplicar polimorfismo mediante sobrescritura de métodos (como `toString()` y `getTipo()`) y sobrecarga implícita en constructores.
+
+14. El sistema debe utilizar clases abstractas (clase `Persona`) e interfaces (interfaz `Comparable` en `Evaluacion`) para definir comportamientos comunes y estructuras flexibles.
+
+15. El sistema debe mostrar un menú interactivo por consola que permita navegar entre todas las funcionalidades disponibles (registro, creación, reportes, persistencia).
+
+16. El sistema debe gestionar excepciones de forma robusta, lanzando `LearnixException` cuando ocurran errores lógicos (IDs duplicados, datos inválidos, entidades no encontradas) y manejándolas en el menú principal sin interrumpir la ejecución.
+
+17. El sistema debe permitir guardar todos los datos actuales (cursos, estudiantes, instructores, asistencias, notas) en archivos de texto para persistencia.
+
+18. El sistema debe permitir cargar los datos guardados previamente desde archivos al iniciar o bajo solicitud del usuario, reconstruyendo el estado del sistema.
+
+- REQUERIMIENTOS NO FUNCIONALES
+
+1. El código debe ser modular, legible y documentado, con nombres claros de clases, métodos y variables que sigan convenciones estándar de Java.
+
+2. Las clases deben mantener una relación coherente y semánticamente correcta (asociación, agregación, composición y herencia) que refleje el dominio del problema.
+
+3. El sistema debe estar diseñado para ser fácil de ampliar en futuras versiones (por ejemplo, añadir autenticación, interfaz gráfica, base de datos o cálculo de promedios ponderados).
+
+4. El sistema debe manejar errores de entrada del usuario (opciones inválidas, formatos incorrectos) sin fallar, mostrando mensajes informativos y permitiendo continuar la interacción.
+
+5. El sistema debe ser consistente en su estructura: paquetes organizados, separación de responsabilidades (model, service, util, exception), y uso adecuado de principios de POO.
+
+- VERSIÓN DEL SISTEMA
+
+Versión: 1.0 (Preliminar)  
+**Tipo de entrega:** Estructura inicial del proyecto en Java Orientado a Objetos  
+**Objetivo:** Demostrar comprensión y aplicación de los principios fundamentales de POO: encapsulamiento, herencia, polimorfismo, abstracción, relaciones entre clases, colecciones, manejo de excepciones y persistencia.
