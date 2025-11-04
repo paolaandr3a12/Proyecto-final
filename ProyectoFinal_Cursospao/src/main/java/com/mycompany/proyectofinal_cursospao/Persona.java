@@ -5,7 +5,7 @@ public abstract class Persona {
     private String id;
     private String nombre;
     private String correo;
-
+//constructor
     public Persona(String id, String nombre, String correo) {
         this.id = id;
         this.nombre = nombre;

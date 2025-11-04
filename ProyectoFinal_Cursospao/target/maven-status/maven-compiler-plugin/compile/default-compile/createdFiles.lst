@@ -1,13 +1,13 @@
 com\mycompany\proyectofinal_cursospao\RegistroNotas.class
 com\mycompany\proyectofinal_cursospao\Instructor.class
-com\mycompany\proyectofinal_cursospao\Curso$Sesion.class
-Profesor.class
 com\mycompany\proyectofinal_cursospao\CursoAutoconfianza.class
 com\mycompany\proyectofinal_cursospao\Estudiante.class
 com\mycompany\proyectofinal_cursospao\Main.class
-Estudiante.class
 com\mycompany\proyectofinal_cursospao\Inscripcion.class
 com\mycompany\proyectofinal_cursospao\CursoAlimentacionSaludable.class
-Persona.class
+com\mycompany\proyectofinal_cursospao\GestorArchivos.class
+com\mycompany\proyectofinal_cursospao\TarjetaSpark.class
+com\mycompany\proyectofinal_cursospao\AccesoRecursos.class
 com\mycompany\proyectofinal_cursospao\Curso.class
 com\mycompany\proyectofinal_cursospao\Persona.class
+com\mycompany\proyectofinal_cursospao\Sesion.class

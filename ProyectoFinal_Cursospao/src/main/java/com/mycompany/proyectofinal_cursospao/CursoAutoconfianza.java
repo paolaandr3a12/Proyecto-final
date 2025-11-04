@@ -1,24 +1,27 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.proyectofinal_cursospao;
 
-// CursoAutoconfianza.java
+import java.util.ArrayList;
+
 public class CursoAutoconfianza extends Curso {
+
+    // Constructor correcto, sin pasar inscripciones
     public CursoAutoconfianza(String codigo, String titulo, Instructor instructor) {
-        super(codigo, titulo, instructor);
+        super(codigo, titulo, instructor, new ArrayList<>());
     }
 
     @Override
     public double calcularNotaFinal(Estudiante e) {
-        // distinto algoritmo: promediamos, pero penalizamos faltas
+        // Algoritmo de ejemplo: promedio penalizado por inasistencias
         double base = e.promedio();
+
         long asistencias = getInscripciones().stream()
                 .filter(i -> i.getEstudiante().getId().equals(e.getId()) && i.isAsistio())
                 .count();
+
         long totalSesiones = sesiones.isEmpty() ? 1 : sesiones.size();
         double proporcion = (double) asistencias / totalSesiones;
-        return Math.max(0.0, base * 0.6 + proporcion * 2.0); // ejemplo personalizado
+
+        // Cálculo personalizado
+        return Math.max(0.0, base * 0.6 + proporcion * 2.0);
     }
 }
